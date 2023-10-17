@@ -1,3 +1,4 @@
+
 let arr = getItemFromLocalStorage();
 
 display();
