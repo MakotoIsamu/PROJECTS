@@ -19,12 +19,6 @@ function addTask(){
     display();
 }
 
-function onEnterPress(event) {
-    if (event.key === "Enter") {
-        addTask();
-    }
-}
-
 function display(){
     let container = document.querySelector('.todoContainer')
     let newHTML = ' '

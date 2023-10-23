@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css_files/page1.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="product_container"></div>
+        <div class="navbar">
+            <a href="/sample/html_files/homepage.html">HOME</a>
+            <a href="/sample/page1.html">PRODUCTS</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">CONTACT US</a>
+            <a href="#">
+                <i class="ri-shopping-cart-line"></i>
+                (<p class="add_to_bag_counter">0</p>)
+            </a>
+            <div class="sorting-button">
+                <button onclick="showSortOptions()">Sort By Prices</button>
+                <div class="sort-options" id="sortOptions">
+                    <a href="javascript:void(0);" onclick="sortByPrice('asc')">Lowest Price First</a>
+                    <a href="javascript:void(0);" onclick="sortByPrice('desc')">Highest Price First</a>
+                    <a href="javascript:void(0);" onclick="sortByRecommended()">Recommended</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript_files/datapage.js"></script>
+    <script src="javascript_files/page1.js"></script>
+</body>
+</html>

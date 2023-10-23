@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .cart-item {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 3px 3px 5px #888888;
+        }
+
+        .cart-item img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .quantity {
+            display: inline-block;
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Shopping Cart</h1>
+    <div class="cart-item">
+        <img src="product_image.jpg" alt="Product Image">
+        <h3>Product Name</h3>
+        <p>Category: Product Category</p>
+        <p>Price: $XX.XX</p>
+        <p>Quantity: <button id="decrease">-</button> <span class="quantity" id="quantity">1</span> <button id="increase">+</button></p>
+        <button>Add to Wishlist</button>
+    </div>
+    <!-- Repeat the above structure for each product in the cart -->
+
+    <script>
+        let quantity = 1; // Initial quantity
+
+        document.querySelector("#decrease").addEventListener("click", () => {
+            if (quantity > 1) {
+                quantity--;
+                updateQuantity(quantity);
+            }
+        });
+
+        document.querySelector("#increase").addEventListener("click", () => {
+            quantity++;
+            updateQuantity(quantity);
+        });
+
+        function updateQuantity(quantity) {
+            document.querySelector("#quantity").textContent = quantity;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.main{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    overflow: hidden;
+}
+
+.navbar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: black;
+}
+
+.leftnav{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.midnav{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.midnav input{
+    width: 90%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.rightnav{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+button{
+    padding: 10px 30px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+.rightnav i{
+    font-size: 30px;
+}
+
+.cart_container{
+    height: auto;
+    width: 100%;
+    display: flex;
+    background-color: black;
+}
+
+.left_cart{
+    height: 100%;
+    width: 60%;
+    overflow: hidden;
+}
+
+.left_container{
+    height: auto;
+    width: 500px;
+    border: 1px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    margin-left: 6%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+.image_container{
+    width: 30%;
+}
+
+.image_container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.info_container{
+    display: flex;
+    position: relative;
+}
+
+.left_info_container{
+    width: 70%;
+}
+
+.product_discountPrice{
+    color: rgb(185, 182, 182);
+    text-decoration: line-through;
+}
+
+.product_discountPercentage{
+    color: rgb(235, 83, 56);
+}
+
+.info_container i{
+    font-size: 30px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+}
+
+.right_cart{
+    height: calc(100vh - 100px);
+    width: 40%;
+    border: 1px solid white;
+}
+
+.right_container{
+    height: 300px;
+    width: 400px;
+    border: 1px solid white;
+    margin-left: 6%;
+    margin-top: 6%;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 6%;
+}
+
+.top_right_container{
+    height: 180px;
+    width: 100%;
+    border-bottom: 1px solid white;
+    display: flex;
+    gap: 10px;
+}
+
+.summary_info{
+    height: 100%;
+    width: 70%;
+}
+.summary_info p{
+    margin-bottom: 15px;
+}
+
+.bottom_right_container{
+    height: 100px;
+    width: 100%;
+}
+
+.right_container .bottom_right_container button{
+    width: 100%;
+    height: 60%;
+}
+
+.product_originalPrice{
+    margin-top: 35px;
+}
