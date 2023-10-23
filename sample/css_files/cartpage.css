@@ -135,7 +135,6 @@ button{
 .right_cart{
     height: calc(100vh - 100px);
     width: 40%;
-    border: 1px solid white;
 }
 
 .right_container{

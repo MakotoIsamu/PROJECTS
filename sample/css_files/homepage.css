@@ -103,3 +103,7 @@ button{
     align-items: center;
     font-weight: 800;
 }
+
+.ri-menu-line{
+    cursor: pointer;
+}

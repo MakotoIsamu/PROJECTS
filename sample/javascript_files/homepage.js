@@ -19,7 +19,7 @@ main.addEventListener('mouseleave' , function (e){
 menuBtn.addEventListener('click', function(){
     
     if(tap === 0){
-        sidebar.style.width = "100%";
+        sidebar.style.width = "50%";
         tap = 1;
     } else {
         sidebar.style.width = "0";

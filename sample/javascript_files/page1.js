@@ -52,41 +52,41 @@ function displayProductsOnPage(){
     productContainerEl.innerHTML=innerHTML
 }
 
-// Function to show the sorting options dropdown
-function showSortOptions() {
-    var sortOptions = document.getElementById('sortOptions');
-    if (sortOptions.style.display === 'block') {
-        sortOptions.style.display = 'none';
-    } else {
-        sortOptions.style.display = 'block';
-    }
-}
+// // Function to show the sorting options dropdown
+// function showSortOptions() {
+//     var sortOptions = document.getElementById('sortOptions');
+//     if (sortOptions.style.display === 'block') {
+//         sortOptions.style.display = 'none';
+//     } else {
+//         sortOptions.style.display = 'block';
+//     }
+// }
 
-// Function to sort products by price (asc for lowest, desc for highest)
-function sortByPrice(order) {
-    if (order === 'asc') {
-        products.sort((a, b) => a.original_price - b.original_price);
-    } else if (order === 'desc') {
-        products.sort((a, b) => b.original_price - a.original_price);
-    }
+// // Function to sort products by price (asc for lowest, desc for highest)
+// function sortByPrice(order) {
+//     if (order === 'asc') {
+//         products.sort((a, b) => a.original_price - b.original_price);
+//     } else if (order === 'desc') {
+//         products.sort((a, b) => b.original_price - a.original_price);
+//     }
 
-    // Update the displayed products after sorting
-    displayProductsOnPage();
-}
+//     // Update the displayed products after sorting
+//     displayProductsOnPage();
+// }
 
-function sortByRecommended() {
-    products.sort((a, b) => {
-        // Sort by rating in descending order (higher rating first)
-        if (a.rating > b.rating) return -1;
-        if (a.rating < b.rating) return 1;
+// function sortByRecommended() {
+//     products.sort((a, b) => {
+//         // Sort by rating in descending order (higher rating first)
+//         if (a.rating > b.rating) return -1;
+//         if (a.rating < b.rating) return 1;
 
-        // If ratings are equal, sort by rating counts in descending order
-        if (a.rating_count > b.rating_count) return -1;
-        if (a.rating_count < b.rating_count) return 1;
+//         // If ratings are equal, sort by rating counts in descending order
+//         if (a.rating_count > b.rating_count) return -1;
+//         if (a.rating_count < b.rating_count) return 1;
 
-        return 0; // Products have the same rating and rating counts
-    });
+//         return 0; // Products have the same rating and rating counts
+//     });
 
-    // Re-display products on the page with the new order
-    displayProductsOnPage();
-}
+//     // Re-display products on the page with the new order
+//     displayProductsOnPage();
+// }
