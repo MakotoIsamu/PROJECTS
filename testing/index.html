@@ -1,82 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Cart</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f1f1f1;
-            text-align: center;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        .cart-item {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            margin: 10px;
-            padding: 10px;
-            box-shadow: 3px 3px 5px #888888;
-        }
-
-        .cart-item img {
-            max-width: 100px;
-            height: auto;
-            margin-right: 10px;
-        }
-
-        .quantity {
-            display: inline-block;
-            font-weight: bold;
-            font-size: 18px;
-            margin: 0 10px;
-        }
-
-        button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
 </head>
 <body>
-    <h1>Your Shopping Cart</h1>
-    <div class="cart-item">
-        <img src="product_image.jpg" alt="Product Image">
-        <h3>Product Name</h3>
-        <p>Category: Product Category</p>
-        <p>Price: $XX.XX</p>
-        <p>Quantity: <button id="decrease">-</button> <span class="quantity" id="quantity">1</span> <button id="increase">+</button></p>
-        <button>Add to Wishlist</button>
-    </div>
-    <!-- Repeat the above structure for each product in the cart -->
 
-    <script>
-        let quantity = 1; // Initial quantity
+<h2>Multiplication Table Generator</h2>
 
-        document.querySelector("#decrease").addEventListener("click", () => {
-            if (quantity > 1) {
-                quantity--;
-                updateQuantity(quantity);
-            }
-        });
+<input type="number" id="number" placeholder="Enter a number">
+<button onclick="generateTable()">Generate Table</button>
 
-        document.querySelector("#increase").addEventListener("click", () => {
-            quantity++;
-            updateQuantity(quantity);
-        });
+<table id="table"></table>
 
-        function updateQuantity(quantity) {
-            document.querySelector("#quantity").textContent = quantity;
-        }
-    </script>
+<script>
+  function generateTable() {
+    var number = parseInt(document.getElementById("number").value);
+    var table = document.getElementById("table");
+    table.innerHTML = ""; // Clear previous table, if any.
+
+    for (var i = 1; i <= 10; i++) {
+      var row = table.insertRow();
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+
+      cell1.innerHTML = number + " x " + i;
+      cell2.innerHTML = number * i;
+    }
+  }
+</script>
+
 </body>
 </html>

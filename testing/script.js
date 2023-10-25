@@ -1,21 +1,35 @@
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const colorPicker = document.getElementById("color");
+const clearButton = document.getElementById("clear-button");
 
-const quantity = 1; // Initial quantity
+let drawing = false;
+let lastX = 0;
+let lastY = 0;
+ctx.strokeStyle = colorPicker.value;
+ctx.lineWidth = 5;
 
-    // Decrease quantity
-document.querySelector("#decrease").addEventListener("click", () => {
-  if (quantity > 1) {
-    quantity--;
-    updateQuantity(quantity);
-  }
+canvas.addEventListener("mousedown", (e) => {
+  drawing = true;
+  [lastX, lastY] = [e.offsetX, e.offsetY];
 });
 
-    // Increase quantity
-document.querySelector("#increase").addEventListener("click", () => {
-  quantity++;
-  updateQuantity(quantity);
+canvas.addEventListener("mousemove", draw);
+
+canvas.addEventListener("mouseup", () => (drawing = false));
+canvas.addEventListener("mouseout", () => (drawing = false));
+
+colorPicker.addEventListener("input", (e) => (ctx.strokeStyle = e.target.value));
+
+clearButton.addEventListener("click", () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
 
-function updateQuantity(quantity) {
-  document.querySelector("#quantity").innerHTML = quantity;
+function draw(e) {
+  if (!drawing) return;
+  ctx.beginPath();
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(e.offsetX, e.offsetY);
+  ctx.stroke();
+  [lastX, lastY] = [e.offsetX, e.offsetY];
 }
-
